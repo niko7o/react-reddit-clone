@@ -1,0 +1,7 @@
+.bottomBar {
+    display: flex;
+}
+
+.bottomBar span {
+    margin-right: 1em;
+}

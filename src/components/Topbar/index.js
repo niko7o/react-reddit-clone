@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './styles.css';
 
 const POST_BY = 'Posted by';
 
@@ -36,16 +37,14 @@ export default class Topbar extends Component {
         return (
             <React.Fragment>
                 <div>
-                    {votes}
-                </div>
-                <div>
-                    <div>
-                        <img src={subredditImage} alt="Subreddit image"/>
-                        <h4>{subreddit}</h4>
+                    <div className="postInfo">
+                        <div className="votes">{votes}</div>
+                        <img className="avatar" src={subredditImage} alt="Subreddit image"/>
+                        <h4>r/{subreddit}</h4>
                         <span>{`${POST_BY} ${author}`}</span>
+                        <span className="tag">{category}</span>
                     </div>
                     <div>
-                        <span>{category}</span>
                         <h1>{title}</h1>
                     </div>
                 </div>

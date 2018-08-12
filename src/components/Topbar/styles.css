@@ -1,0 +1,30 @@
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+h4 {
+    display: inline;
+    margin:0 0.5em;
+}
+
+.votes {
+    margin-right: 1em;
+    color: #d3d3d3;
+}
+
+.postInfo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tag {
+    display: inline;
+    margin-left: 0.8em;
+    background-color: #37a1ff;
+    font-size: 10px;
+    color: white;
+    border-radius: 3px;
+    padding: 4px 8px;
+}

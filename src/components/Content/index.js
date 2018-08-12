@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './styles.css'
 
 const baseClassName = 'Content';
 
 const Content = ({ content }) => (
-    <div class={baseClassName}>
+    <div className={baseClassName}>
         <p>{content.text}</p>
         {content.image &&
             <img src={content.image} alt="Content Image" />

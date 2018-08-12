@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import './styles.css'
 
 const BottomBar = ({ comments, upvoteRatio }) => (
     // Always return only one father Div, or React.Fragment if no classes are needed
     <div>
-        <div>
+        <div className="bottomBar">
             <span>{comments} Comments</span>
             <span>Share</span>
             <span>Give gold</span>
-        </div>
-
-        <div>
-            <span>{upvoteRatio}% upvotes</span>
+            <span className="upvotes">{upvoteRatio}% upvotes</span>
         </div>
     </div>
 )

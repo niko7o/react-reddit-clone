@@ -49,8 +49,6 @@ export default class RedditPost extends Component {
 
         return (
             <div className={baseClassName}>
-                <h1>Topbar</h1>
-
                 <Topbar 
                   subreddit={subreddit}
                   subredditImage={subredditImage}
