@@ -24,7 +24,14 @@ export default class Topbar extends Component {
         title: undefined,
         votes: undefined    
     }
-    
+
+    //@TO-DO: Fix the "null" issue when trying to set state to +1
+    increaseVotes = (prevState) => {
+        this.setState((prevState) => {
+            return { votes: prevState.votes + 1 }
+        })
+    }
+
     render() {
         const {
             subreddit,
@@ -39,7 +46,11 @@ export default class Topbar extends Component {
             <React.Fragment>
                 <div className={baseClassName}>
                     <div className="Topbar_postInfo">
-                        <div className="Topbar_votes">{votes}</div>
+                        <div className="Topbar_votes">
+                            <button onClick={this.increaseVotes}>+</button>
+                            <p className="Topbar_voteNumber">{votes}</p>
+                            <button>-</button>
+                        </div>
                         <div className="Topbar_details">
                             <img className="Topbar_avatar" src={subredditImage} alt="subreddit" />
                             <h4 className="Topbar_subreddit">r/{subreddit}</h4>

@@ -15,6 +15,7 @@
 .Topbar_votes {
     flex-basis: 6%;
     color: #d3d3d3;
+    text-align: center;
 }
 
 .Topbar_details {
