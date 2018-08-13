@@ -1,7 +1,6 @@
 .RedditPost {
     background-color: #FFF;
-    margin: 2rem;
+    margin: 1.5rem;
     border-radius: 4px;
-    padding: 2em;
     box-sizing: border-box;
 }

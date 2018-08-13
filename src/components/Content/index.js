@@ -8,7 +8,7 @@ const Content = ({ content }) => (
     <div className={baseClassName}>
         <p>{content.text}</p>
         {content.image &&
-            <img src={content.image} alt="Content Image" />
+            <img src={content.image} alt="Content" />
         } 
     </div>
 )

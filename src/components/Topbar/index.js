@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 const POST_BY = 'Posted by';
+const baseClassName = 'Topbar';
 
 export default class Topbar extends Component {
 
@@ -36,16 +37,15 @@ export default class Topbar extends Component {
 
         return (
             <React.Fragment>
-                <div>
+                <div className={baseClassName}>
                     <div className="postInfo">
                         <div className="votes">{votes}</div>
-                        <img className="avatar" src={subredditImage} alt="Subreddit image"/>
-                        <h4>r/{subreddit}</h4>
-                        <span>{`${POST_BY} ${author}`}</span>
-                        <span className="tag">{category}</span>
+                        <img className="avatar" src={subredditImage} alt="subreddit"/>
+                        <h4 className="subreddit">r/{subreddit}</h4>
+                        <span className="author">{`${POST_BY} ${author}`}</span>
                     </div>
-                    <div>
-                        <h1>{title}</h1>
+                    <div className="information">
+                        <span className="tag">{category}</span><h1 className="title">{title}</h1>
                     </div>
                 </div>
             </React.Fragment>

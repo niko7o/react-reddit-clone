@@ -4,6 +4,12 @@ import './App.css';
 
 export default class App extends Component {
   render() {
-    return (<RedditPost />);
+    return (
+      <div>
+        <RedditPost />
+        <RedditPost />
+        <RedditPost />
+      </div>
+  );
   }
-}
+} 
