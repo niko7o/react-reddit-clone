@@ -38,16 +38,16 @@ export default class Topbar extends Component {
         return (
             <React.Fragment>
                 <div className={baseClassName}>
-                    <div className="postInfo">
-                        <div className="votes">{votes}</div>
-                        <div className="details">
-                            <img className="avatar" src={subredditImage} alt="subreddit" />
-                            <h4 className="subreddit">r/{subreddit}</h4>
-                            <span className="author">{`${POST_BY} ${author}`}</span>
+                    <div className="Topbar_postInfo">
+                        <div className="Topbar_votes">{votes}</div>
+                        <div className="Topbar_details">
+                            <img className="Topbar_avatar" src={subredditImage} alt="subreddit" />
+                            <h4 className="Topbar_subreddit">r/{subreddit}</h4>
+                            <span className="Topbar_author">{`${POST_BY} ${author}`}</span>
                         </div>
                     </div>
-                    <div className="information">
-                        <span className="tag">{category}</span><h1 className="title">{title}</h1>
+                    <div className="Topbar_information">
+                        <span className="Topbar_tag">{category}</span><h1 className="Topbar_title">{title}</h1>
                     </div>
                 </div>
             </React.Fragment>

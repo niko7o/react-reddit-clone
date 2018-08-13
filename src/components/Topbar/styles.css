@@ -2,39 +2,39 @@
     padding: 2em 0 0 0;
 }
 
-.avatar {
+.Topbar_avatar {
     width: 50px;
     border-radius: 50%;
 }
 
-h4 {
+.Topbar h4 {
     display: inline;
     margin:0 0.5em;
 }
 
-.votes {
+.Topbar_votes {
     flex-basis: 6%;
     color: #d3d3d3;
 }
 
-.details {
+.Topbar_details {
     flex-basis: 94%;
 }
 
-.postInfo {
+.Topbar_postInfo {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.information {
+.Topbar_information {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 6%;
 }
 
-.tag {
+.Topbar_tag {
     display: inline;
     background-color: rgb(237, 239, 241);
     font-size: 10px;
@@ -43,10 +43,11 @@ h4 {
     padding: 4px 10px;
 }
 
-.title {
+.Topbar_title {
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
     display: inline-block;
     line-height: 2em;
     margin-left: 10px;
+    font-size: 20px;
 }
