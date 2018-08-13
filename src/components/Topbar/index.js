@@ -40,9 +40,11 @@ export default class Topbar extends Component {
                 <div className={baseClassName}>
                     <div className="postInfo">
                         <div className="votes">{votes}</div>
-                        <img className="avatar" src={subredditImage} alt="subreddit"/>
-                        <h4 className="subreddit">r/{subreddit}</h4>
-                        <span className="author">{`${POST_BY} ${author}`}</span>
+                        <div className="details">
+                            <img className="avatar" src={subredditImage} alt="subreddit" />
+                            <h4 className="subreddit">r/{subreddit}</h4>
+                            <span className="author">{`${POST_BY} ${author}`}</span>
+                        </div>
                     </div>
                     <div className="information">
                         <span className="tag">{category}</span><h1 className="title">{title}</h1>

@@ -1,10 +1,25 @@
 .BottomBar {
-    padding: 2em;
+    padding: 2em 2em 2em 6%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    color: gray;
 }
 
-.BottomBar span {
+.BottomBar span:not(:last-of-type) {
     margin-right: 2em;
+}
+
+.upvotes {
+    flex-grow: 1;
+}
+
+.left {
+    flex-basis: 80%;
+}
+
+.right {
+    flex-basis: 20%;
+    text-align: right;
+    font-size: 13px;
 }
