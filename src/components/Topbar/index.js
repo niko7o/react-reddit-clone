@@ -40,25 +40,25 @@ export default class Topbar extends Component {
             author,
             title,
             votes,
-        } = this.props; // Destructuring again
+        } = this.props; // Destructuring
 
         return (
             <React.Fragment>
                 <div className={baseClassName}>
                     <div className="Topbar_postInfo">
                         <div className="Topbar_votes">
-                            <button onClick={this.increaseVotes}>+</button>
-                            <p className="Topbar_voteNumber">{votes}</p>
+                            <button onClick={ this.increaseVotes }>+</button>
+                            <p className="Topbar_voteNumber">{ votes }</p>
                             <button>-</button>
                         </div>
                         <div className="Topbar_details">
-                            <img className="Topbar_avatar" src={subredditImage} alt="subreddit" />
-                            <h4 className="Topbar_subreddit">r/{subreddit}</h4>
-                            <span className="Topbar_author">{`${POST_BY} ${author}`}</span>
+                            <img className="Topbar_avatar" src={ subredditImage } alt="subreddit" />
+                            <h4 className="Topbar_subreddit">r/{ subreddit }</h4>
+                            <span className="Topbar_author">{`${POST_BY} ${ author }`}</span>
                         </div>
                     </div>
                     <div className="Topbar_information">
-                        <span className="Topbar_tag">{category}</span><h1 className="Topbar_title">{title}</h1>
+                        <span className="Topbar_tag">{ category }</span><h1 className="Topbar_title">{ title }</h1>
                     </div>
                 </div>
             </React.Fragment>
