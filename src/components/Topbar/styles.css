@@ -20,6 +20,8 @@
 
 .Topbar_details {
     flex-basis: 94%;
+    display: flex;
+    align-items: center;
 }
 
 .Topbar_postInfo {
@@ -51,4 +53,8 @@
     line-height: 2em;
     margin-left: 10px;
     font-size: 20px;
+}
+
+.Topbar_subreddit {
+    font-weight: bolder;
 }

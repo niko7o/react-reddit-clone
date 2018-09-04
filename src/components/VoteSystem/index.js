@@ -19,15 +19,21 @@ export default class VoteSystem extends React.Component {
     }
     
     increaseVotes = () => {
+        debugger;
         this.setState(prevState => ({
             votes: prevState.votes + 1,
-        }))
+        }), () => {
+            console.log(this.state)
+        })
     }
 
     decreaseVotes = () => {
+        console.log(prevState.votes)
         this.setState(prevState => ({
             votes: prevState.votes - 1,
-        }))
+        }), () => {
+            console.log(this.state)
+        })
     }
 
     render() {

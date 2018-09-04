@@ -7,9 +7,17 @@ const baseClassName = 'Topbar';
 
 export default class Topbar extends Component {
 
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            votes: undefined
+        }
+    }
+
     static propTypes = {
         subreddit: PropTypes.string,
-        subredditImage: PropTypes.string, // Other possible proptypes: bool, object, shape
+        subredditImage: PropTypes.string,
         category: PropTypes.string,
         author: PropTypes.string,
         title: PropTypes.string,
@@ -22,14 +30,26 @@ export default class Topbar extends Component {
         category: undefined,
         author: undefined,
         title: undefined,
-        votes: undefined    
+        votes: undefined
     }
 
-    //@TO-DO: Fix the "null" issue when trying to set state to +1
-    increaseVotes = (prevState) => {
-        this.setState((prevState) => {
-            return { votes: prevState.votes + 1 }
-        })
+    componentDidUpdate(prevProps) {
+        if(this.props.votes !== prevProps.votes) {
+            this.setState({ votes: this.props.votes })
+        }
+    }
+
+    increaseVotes = () => {
+        this.setState(prevState => ({
+            votes: prevState.votes + 1,
+        }));
+    }
+
+        
+    decreaseVotes = () => {
+        this.setState(prevState => ({
+            votes: prevState.votes - 1,
+        }));
     }
 
     render() {
@@ -39,8 +59,10 @@ export default class Topbar extends Component {
             category,
             author,
             title,
-            votes,
+            // votes,
         } = this.props; // Destructuring
+
+        const { votes } = this.state
 
         return (
             <React.Fragment>
@@ -49,7 +71,7 @@ export default class Topbar extends Component {
                         <div className="Topbar_votes">
                             <button onClick={ this.increaseVotes }>+</button>
                             <p className="Topbar_voteNumber">{ votes }</p>
-                            <button>-</button>
+                            <button onClick={ this.decreaseVotes }>-</button>
                         </div>
                         <div className="Topbar_details">
                             <img className="Topbar_avatar" src={ subredditImage } alt="subreddit" />

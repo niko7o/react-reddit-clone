@@ -27,7 +27,6 @@ export default class RedditPost extends Component {
     // Simulate API Request and set it once component is mounted
     componentDidMount() {
         const apiResponse = getApiResponse();
-
         this.setState(apiResponse);
     }
 

@@ -16,10 +16,9 @@ export default class App extends Component {
     return (
       <div>
         <RedditPost />
-        {/*
         <RedditPost />
-        <RedditPost /> 
-        */}
+        <RedditPost />
+        <RedditPost />
       </div>
   );
   }
